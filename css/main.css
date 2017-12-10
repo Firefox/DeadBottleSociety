@@ -1,0 +1,226 @@
+@font-face {
+            font-family: 'FontAwesome';
+            src: url('../vendor/font-awesome/fonts/fontawesome-webfont.eot?v=4.6.3') !important;
+            src: url('../vendor/font-awesome/fonts/fontawesome-webfont.eot?#iefix&v=4.6.3') format('embedded-opentype'),url('../fonts/fontawesome-webfont.woff2?v=4.6.3') format('woff2'),url('../fonts/fontawesome-webfont.woff?v=4.6.3') format('woff'),url('../fonts/fontawesome-webfont.ttf?v=4.6.3') format('truetype'),url('../fonts/fontawesome-webfont.svg?v=4.6.3#fontawesomeregular') format('svg') !important;
+            font-weight: normal;
+            font-style: normal;
+        }
+
+.img-thumbnail {
+	padding: 10px;
+}
+
+.post-box {
+	margin: 5px 0 0px 0;
+	padding-right: 0px;
+	padding-left: 4px;
+}
+
+.fancybox-custom .fancybox-skin {
+	box-shadow: 0 0 50px #222;
+}
+
+.height220 {
+	min-height: 150px;
+	padding-right: 0px;
+}
+
+ul {
+	padding: 0 0 0 0;
+	margin: 0 0 0 0;
+}
+
+	ul li {
+		list-style: none;
+	}
+
+		ul li img {
+			cursor: pointer;
+		}
+/* The Close Button */
+.close {
+	margin-right: 5px;
+	font-size: 21px;
+}
+
+.modalBody {
+	position: relative;
+	margin: 10px;
+}
+
+.modalFooter {
+	margin-left: 10px;
+	margin-bottom: 10px;
+	margin-right: 10px;
+	font-size: 16px;
+}
+
+.clear {
+	clear: both;
+}
+hr {
+	margin-bottom: -10px!important;
+	clear:both;
+}
+p{
+	margin:10px 0;
+}
+
+
+ul {
+	list-style-type: none !important;
+}
+
+.list {
+	font-family: Lora, sans-serif;
+	margin: 0 !important;
+	padding: 20px 0 0 !important;
+}
+
+
+.avatar {
+	max-width: 150px;
+}
+
+img {
+	max-width: 100%;
+}
+
+input {
+	border: solid 1px #ccc;
+	border-radius: 5px;
+	padding: 7px 14px;
+	margin-bottom: 10px;
+}
+
+	input:focus {
+		outline: none;
+		border-color: #aaa;
+	}
+
+.sort {
+	padding: 8px 30px;
+	border-radius: 6px;
+	border: none;
+	display: inline-block;
+	color: #fff;
+	text-decoration: none;
+	background-color: #28a8e0;
+	height: 30px;
+}
+
+.sort:hover {
+	text-decoration: none;
+	background-color: #1b8aba;
+}
+
+.sort:focus {
+	outline: none;
+}
+
+.sort:after {
+	width: 0;
+	height: 0;
+	border-left: 5px solid transparent;
+	border-right: 5px solid transparent;
+	border-bottom: 5px solid transparent;
+	content: "";
+	position: relative;
+	top: -10px;
+	right: -5px;
+}
+
+.sort.asc:after {
+	width: 0;
+	height: 0;
+	border-left: 5px solid transparent;
+	border-right: 5px solid transparent;
+	border-top: 5px solid #fff;
+	content: "";
+	position: relative;
+	top: 13px;
+	right: -5px;
+}
+
+.sort.desc:after {
+	width: 0;
+	height: 0;
+	border-left: 5px solid transparent;
+	border-right: 5px solid transparent;
+	border-bottom: 5px solid #fff;
+	content: "";
+	position: relative;
+	top: -10px;
+	right: -5px;
+}
+
+.search{
+	width: 100%
+}
+.description {
+	margin: 0 0 15px;
+	font-weight: 300;
+}
+.rating {
+	overflow: hidden;
+	display: inline-block;
+	margin-top:5px;
+	margin-bottom: 15px;
+	float:left;
+}
+
+.reviews {
+	float:left;
+	margin-left: 10px;
+	clear:right
+}
+
+.rating-input {
+	float: right;
+	width: 16px;
+	height: 16px;
+	padding: 0;
+	margin: 0 0 0 -16px;
+	opacity: 0;
+	display:none;
+}
+
+.rating-star {
+	position: relative;
+	float: right;
+	display: block;
+	width: 16px;
+	height: 16px;
+	background: url('http://kubyshkin.ru/samples/star-rating/star.png') 0 -16px;
+	margin-right:5px
+}
+
+
+.rating-input:checked ~ .rating-star {
+  background-position: 0 0;
+}
+
+.text-right{
+	text-align:right;
+}
+.pad0{
+	padding: 0px;
+}
+.divBackgroundHeader{
+    background-color:black;
+    z-index:0;
+    opacity:0.8;
+	padding:20px;
+}
+
+.mar20B{
+	margin-bottom: 20px;
+}
+
+.mar10T{
+	margin-top: 10px;
+}
+
+.mar30B{
+	margin-bottom: 30px;
+}

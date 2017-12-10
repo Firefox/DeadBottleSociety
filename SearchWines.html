@@ -1,0 +1,400 @@
+﻿<!DOCTYPE html>
+<html lang="en">
+<head>
+    <link rel="icon" type="image/x-icon" href="favicon.ico">
+    <meta charset="utf-8">
+    <meta http-equiv="X-UA-Compatible" content="IE=edge">
+    <meta name="viewport" content="width=device-width, initial-scale=1">
+    <meta name="description" content="">
+    <meta name="author" content="">
+    <title>Dead Bottle Society | Search Wines</title>
+    <!-- Bootstrap Core CSS -->
+    <link href="vendor/bootstrap/css/bootstrap.min.css" rel="stylesheet">
+    <!-- Theme CSS -->
+    <link href="css/clean-blog.min.css" rel="stylesheet">
+    <link href='css/main.css' rel='stylesheet' type='text/css'>
+    <!-- Custom Fonts -->
+    <script type="text/javascript" src="js/jquery-1.10.1.min.js"></script>
+    <link href="vendor/font-awesome/css/font-awesome.min.css" rel="stylesheet" type="text/css">
+    <link href='https://fonts.googleapis.com/css?family=Lora:400,700,400italic,700italic' rel='stylesheet' type='text/css'>
+    <link href='https://fonts.googleapis.com/css?family=Open+Sans:300italic,400italic,600italic,700italic,800italic,400,300,600,700,800' rel='stylesheet' type='text/css'>
+    <script src="http://listjs.com/assets/javascripts/list.min.js"></script>
+    <script src="https://cdnjs.cloudflare.com/ajax/libs/list.pagination.js/0.1.1/list.pagination.min.js"></script>
+    <script type="text/javascript" src="js/main.js"></script>
+    <!-- HTML5 Shim and Respond.js IE8 support of HTML5 elements and media queries -->
+    <!-- WARNING: Respond.js doesn't work if you view the page via file:// -->
+    <!--[if lt IE 9]>
+        <script src="https://oss.maxcdn.com/libs/html5shiv/3.7.0/html5shiv.js"></script>
+        <script src="https://oss.maxcdn.com/libs/respond.js/1.4.2/respond.min.js"></script>
+    <![endif]-->
+</head>
+<body>
+    <!-- Navigation -->
+    <nav class="navbar navbar-default navbar-custom navbar-fixed-top">
+        <div class="container-fluid">
+            <!-- Brand and toggle get grouped for better mobile display -->
+            <div class="navbar-header page-scroll">
+                <button type="button" class="navbar-toggle" data-toggle="collapse" data-target="#bs-example-navbar-collapse-1">
+                    <span class="sr-only">Toggle navigation</span>
+                    Menu <i class="fa fa-bars"></i>
+                </button>
+                <a class="navbar-brand" href="index.html">Dead Bottle Society</a>
+            </div>
+            <!-- Collect the nav links, forms, and other content for toggling -->
+            <div class="collapse navbar-collapse" id="bs-example-navbar-collapse-1">
+                <ul class="nav navbar-nav navbar-right">
+                    <li>
+                        <a href="index.html">Home</a>
+                    </li>
+                    <li>
+                        <a href="about.html">About Us</a>
+                    </li>
+                    <li>
+                        <a href="Top10Wines.html">Our Top 10 Wines</a>
+                    </li>
+                    <li>
+                        <a href="SearchWines.html">Search Wines</a>
+                    </li>
+                    <li>
+                        <a href="gallery.html">Gallery</a>
+                    </li>
+                    <li>
+                        <a href="themes.html">Themes</a>
+                    </li>
+                </ul>
+            </div>
+            <!-- /.navbar-collapse -->
+        </div>
+        <!-- /.container -->
+    </nav>
+    <!-- Page Header -->
+    <!-- Set your background image for this header on the line below. -->
+    <header class="intro-header" style="background-image: url('img/2016-08-26-Wine-Club-03_Jaydon_Rotation_04.jpg'); background-position:top">
+        <div class="container">
+            <div class="row">
+                <div class="col-lg-8 col-lg-offset-2 col-md-10 col-md-offset-1">
+                    <div class="page-heading">
+						<div class="divBackgroundHeader">
+							<h1>Search Wines</h1>
+							<hr class="small">
+							<span class="subheading">These are the wines we have discovered.</span>
+						</div>
+                    </div>
+                </div>
+            </div>
+        </div>
+    </header>
+    <!-- Main Content -->
+    <div class="container">
+        <div class="row">
+            <div class="col-lg-8 col-lg-offset-2 col-md-10 col-md-offset-1">
+                <p>Below are all the wines we have had the priviledge of consuming.</p>
+            </div>
+        </div>
+        <div class="row">
+            <div class="col-lg-8 col-lg-offset-2 col-md-10 col-md-offset-1">
+                <div id="users">
+                    <input class="search" placeholder="Search" />
+
+                    <div class="col-lg-12 col-md-12 col-xs-12"  style="width:100%;padding-left:0px; margin-top:10px; padding-bottom:10px">
+                    </div>
+                    <div id="divList">
+                        <ul class="list nav">
+                        </ul>
+                        <ul class="pagination"></ul>
+                    </div>
+                </div>
+            </div>
+        </div>
+    </div>
+    <hr>
+    <!-- Footer -->
+    <footer>
+        <div class="container">
+            <div class="row">
+                <div class="col-lg-8 col-lg-offset-2 col-md-10 col-md-offset-1">
+                    <ul class="list-inline text-center">
+                        <li>
+                            <a href="#">
+                                <span class="fa-stack fa-lg">
+                                    <i class="fa fa-circle fa-stack-2x"></i>
+                                    <i class="fa fa-instagram fa-stack-1x fa-inverse"></i>
+                                </span>
+                            </a>
+                        </li>
+                       
+                    </ul>
+                    <p class="copyright text-muted">Copyright &copy; DBS <label id="lblYear"></label></p>
+                </div>
+            </div>
+        </div>
+    </footer>
+    <!-- jQuery -->
+    <script src="vendor/jquery/jquery.min.js"></script>
+    <!-- Bootstrap Core JavaScript -->
+    <script src="vendor/bootstrap/js/bootstrap.min.js"></script>
+    <!-- Contact Form JavaScript -->
+    <script src="js/jqBootstrapValidation.js"></script>
+    <script src="js/contact_me.js"></script>
+    <!-- Theme JavaScript -->
+    <script src="js/clean-blog.min.js"></script>
+    <script type="text/javascript">
+
+        var template = '<li >';
+        template += '<div style="display: inline-block; margin-bottom: 5px;">';
+        template += '<div class="col-lg-12 col-md-12 col-xs-12 clear pad0">';
+        template += '<h2 class="name post-title" style="margin-top:30px">[NAME]</h2>';
+        template += '<div class="col-lg-3 col-md-3" style="padding: 0px!important;margin:0px 10px 10px 0px;">';
+        template += '<img src="[URL]" style="width: 100%;" />';
+        template += '</div>';
+        template += '<div class="col-lg-8 col-md-8 mrg10T"  style="padding: 0px!important;margin:0px 10px 10px 0px;display: inline-block;">';
+        template += '<div class="col-lg-12 col-md-12 col-xs-12">';
+        template += '<div class="col-lg-3 col-md-3 col-xs-5"><label class="floatR">Winery: </label></div>';
+        template += '<div class="col-lg-8 col-md-8 col-xs-6 winery">[WINERY]</div>';
+        template += '</div>';
+        template += '<div class="col-lg-12 col-md-12 col-xs-12">';
+        template += '<div class="col-lg-3 col-md-3 col-xs-5"><label class="floatR">Vintage: </label></div>';
+        template += '<div class="col-lg-8 col-md-8 col-xs-6 vintage">[VINTAGE]</div>';
+        template += '</div>';
+        template += '<div class="col-lg-12 col-md-12 col-xs-12">';
+        template += '<div class="col-lg-3 col-md-3 col-xs-5"><label  class="floatR">Style: </label></div>';
+        template += '<div class="col-lg-8 col-md-8 col-xs-6 style">[STYLE]</div>';
+        template += '</div>';
+        template += '<div class="col-lg-12 col-md-12 col-xs-12">';
+        template += '<div class="col-lg-3 col-md-3 col-xs-5"><label class="floatR">Theme: </label></div>';
+        template += '<div class="col-lg-8 col-md-8 col-xs-6 colour">[COLOUR]</div>';
+        template += '</div>';
+        template += '<div class="col-lg-12 col-md-12 col-xs-12">';
+        template += '<div class="col-lg-3 col-md-3 col-xs-5"><label class="floatR">Rating: </label></div>';
+        template += '<div class="col-lg-8 col-md-8 col-xs-6 score">[RATING]</div>';
+        template += '</div>';
+        template += '<div class="col-lg-12 col-md-12 col-xs-12 description" style="padding: 0; font-style: italic; margin: 10px 10px;">[DESCRIPTION]</div>';
+
+        template += '</div>';
+        template += '</div>';
+        template += '</div>';
+        template += '<hr />';
+        template += '</li>';
+        
+        var arr = [
+            // ['Niel Joubert', 'Photos/2016-06-18 Wine Club 01_Alex_Rotation/2016-06-18-Wine-Club-01_Alex_Rotation_05.jpg', 'Paarl', '2015', 'Chenin Blanc', 'White', 'Almost colourless with bright yellow reflections. Very attractive nose with lots of tropical fruit gauva, granadilla and some citrus. Bright and fresh in the mouth with lively action across the palate. All the flavour the nose promised with hint of pineapple and some lemon. Good, brisk acidity gives balance to the ripe tropical flavours. Refreshing finish.'],
+            // ['The Strawberry', 'Photos/2016-06-18 Wine Club 01_Alex_Rotation/2016-06-18-Wine-Club-01_Alex_Rotation_07.jpg', 'Mooiplaas', '2015', 'Pinot Noir (Rosé)', 'Red', '<p>The wine has a lovely dark strawberry, with a nose of ripe strawberries. The palate is fresh and nicely balanced. <p/><p>The alcohol of 12 vol% and firm acid is ideal for an easy drinking summer wine.</p>'],
+            // ['Coral Reef', 'Photos/2016-06-18 Wine Club 01_Alex_Rotation/2016-06-18-Wine-Club-01_Alex_Rotation_10.jpg', 'Western Cape', '2015', 'Merlot', 'Red'],
+
+            // ['Nederberg Lyric', 'Photos/2016-07-23 Wine Club 02_Bronwen_Rotation/2016-07-23-Wine-Club-02_Bronwen_Rotation_08.jpg', 'Nederberg Wines', '2015', 'Sauvignon Blanc, Chenin Blanc, Chardonnay', 'White', '<p>This harmonious wine is made from Sauvignon blanc, Chenin blanc and Chardonnay. Crisp and refreshing with aromas of passion fruit and citrus, and hints of freshly-cut grass. Enjoy with seafood, salads, mild Indian curries and Thai noodles.</p>'],
+            // ['Two Oceans', 'Photos/2016-07-23 Wine Club 02_Bronwen_Rotation/2016-07-23-Wine-Club-02_Bronwen_Rotation_06.jpg', 'Western Cape', '2015', 'Shiraz, Rosé', 'Red'],
+            // //['Natural Sweet Rosé', 'Photos/unknown.jpg', 'Robertson Winery', 'NV', 'Rosé', 'Red'],
+            // ['Alexanderfontein Cabernet Sauvignon', 'Photos/2016-07-23 Wine Club 02_Bronwen_Rotation/2016-07-23-Wine-Club-02_Bronwen_Rotation_04.jpg', 'Alexanderfontein', '2014', 'Cabernet Sauvignon', 'Red', '<p>Few things complement each other as well as this Cabernet Sauvingnon, a good dark chocolate and a small cup of coffee. A good quality organic dark chocolate, but not too bitter in flavour, is a good choice or opt for your favourite dark chocolate as the accompaniment to a glass of the wine. A chocolate truffle made with dark chocolate and a hint of coffee will also be delicious.</p>'],
+            // ['Graham Beck', 'Photos/2016-07-23 Wine Club 02_Bronwen_Rotation/2016-07-23-Wine-Club-02_Bronwen_Rotation_05.jpg', 'Graham Beck Wines', '2013', 'Shiraz, Cabernet Sauvignon, Viognier', 'Red', 'Sweet red berry fruit flavours from the Merlot and Cabernet Franc and spiciness from the Shiraz with layers of subtle fruit tannins on the palate. Harmonious, lightly oaked, fruit-rich and flavourful with lively drinkability. A generous and rewarding red wine.<p/><p>64% Shiraz, 35% Cabernet Sauvignon, 1% Viognier<p/><p>Enjoy with veal, roast lamb, stews or rich pasta dishes.'],
+
+            // ['Klawer Chenin Blanc', 'Photos/2016-08-26 Wine Club 03_Jaydon_Rotation/2016-08-26-Wine-Club-03_Jaydon_Rotation_07.jpg', 'Klawer Cellars', '2016', 'Chenin Blanc', 'White'],
+            // ['Durbanville Hills Chardonnay', 'Photos/2016-08-26 Wine Club 03_Jaydon_Rotation/2016-08-26-Wine-Club-03_Jaydon_Rotation_06.jpg', 'Durbanville Hills', '2015', 'Chardonnay', 'White', '<p>The grapes for this wine were sourced from vineyards located mostly in the lower Durbanville foothills on the southern slopes, some 250 metres above sea level and grown in dark red soils. The vineyards, yielding around 9 tons per hectare, were harvested from mid to late February between 24° and 26° Balling, when the grapes were showing ripe, yellow colours.</p>'],
+            // ['Pear Tree White', 'Photos/2016-08-26 Wine Club 03_Jaydon_Rotation/2016-08-26-Wine-Club-03_Jaydon_Rotation_08.jpg', 'Bellingham Wines', '2015', 'Chenin Blanc, Viognier', 'White', '<p>Bursts of tropical pineapple, passion fruit and honey melon, tinged with yellow peach and zesty orange blossom both on the nose and palate. An engaging wine of great balance and integration that finishes with freshness and lively fruity intrigue</p>'],
+            // ['Diemersfontein Pinotage', 'Photos/2016-08-26 Wine Club 03_Jaydon_Rotation/2016-08-26-Wine-Club-03_Jaydon_Rotation_10.jpg', 'Diemersfontein', '2014', 'Pinotage', 'Red', '<p>On the nose distinct coffee, rich dark chocolate and baked plums. The ripe subtle tannins create a wine to be drunk very young. This unique style of Pinotage is a perfect accompaniment to salmon, roast venison and even chocolate mousse. Dark chocolate with a hint of mint and baked plums on the nose.</p>'],
+            // ['ORC Rosé', 'Photos/2016-08-26 Wine Club 03_Jaydon_Rotation/2016-08-26-Wine-Club-03_Jaydon_Rotation_09.jpg', 'Orange River Cellars', '2015', 'Rosé', 'Red', '<p>Pink – red with a mouthful of Turkish Delight, strawberry and summer flavours .Enjoy with curries and other spicy foods. Serve well-chilled.</p>'],
+
+            // ['Amy Sauvignon Blanc', 'Photos/2016-09-24 Wine Club 04_Matt_Rotation/2016-09-24-Wine-Club-04_Matt_Rotation_03.jpg', 'Vinglo', '2015', 'Sauvignon Blanc', 'White'],
+            // ['Ladybird', 'Photos/2016-09-24 Wine Club 04_Matt_Rotation/2016-09-24-Wine-Club-04_Matt_Rotation_05.jpg', 'Laibach Vineyards', '2014', 'Chenin Blanc', 'White'],
+            // ['Balance', 'Photos/2016-09-24 Wine Club 04_Matt_Rotation/2016-09-24-Wine-Club-04_Matt_Rotation_08.jpg', 'Overhex Wines', '2016', 'Sauvignon Blanc, Semillon', 'White'],
+            // ['Oakridge', 'Photos/2016-09-24 Wine Club 04_Matt_Rotation/2016-09-24-Wine-Club-04_Matt_Rotation_10.jpg', 'Stellenbosch', '2015', 'Ruby Cabernet Cinsault', 'Red'],
+            // ['Stonedale', 'Photos/2016-09-24 Wine Club 04_Matt_Rotation/2016-09-24-Wine-Club-04_Matt_Rotation_12.jpg', 'Rietvallei Wine Estate', '2015', 'Shiraz', 'Red', '<p>A wine with attractive mocha and berry fruit on the nose, revealing that same berry fruit and mocha on the pallet, infused with chocolate and a hint of spiciness. A smooth and well-balanced wine with soft, juicy tannins, ending with a lingering aftertaste</p>'],
+
+
+            // ['Live-a-Little', 'Photos/2016-10-22 Wine Club 05_Jaydon_Halloween Theme/2016-10-22-Wine-Club-05_Jaydon_Halloween_07.jpg', 'Stellar Organic Winery', ' NV', 'Organic', 'White'],
+            // ['Wolftrap', 'Photos/2016-10-22 Wine Club 05_Jaydon_Halloween Theme/2016-10-22-Wine-Club-05_Jaydon_Halloween_09.jpg', 'Boekenhoutskloof', '2015', 'Viognier, Chenin Blanc, Grenache', 'Red', '<p>Rich opulent flavours of dark fruit, violets, black pepper and liquorice. Round and smooth palate with a lingering soft finish. Hints of oak, soft tannins and voluptuous flavours makes for early, easy drinking. </p>'],
+            // ['Black Tie', 'Photos/2016-10-22 Wine Club 05_Jaydon_Halloween Theme/2016-10-22-Wine-Club-05_Jaydon_Halloween_11.jpg', 'Black Box Wines', '2015', 'Merlot, Cabernet Sauvignon', 'Red'],
+            // ['Waverly Hills', 'Photos/2016-10-22 Wine Club 05_Jaydon_Halloween Theme/2016-10-22-Wine-Club-05_Jaydon_Halloween_13.jpg', 'Rietvallei Wine Estate', '2011', 'Shiraz, Mourvédre, Viognier', 'Red', '<p>The deep maroon centre is complimented with strong prune, oak and spicy tones. A bouquet of red pepper and caramel leaps out of the glass. The wine has a remarkably soft velvet front palette and fruity mid palette, with a fresh and long nish. The Shiraz provides this blend with typical red fruit and spicy avours, with Mourvedre providing berry and fresh herbal aromas. The Viognier compliments the overall aromatic sensation and softness to accompany the wood.</p>'],
+
+            // ['Durbanville Hills Merlot Rosé', 'Photos/2016-11-25 Wine Club 06_Alex_Wines from 2014 or earlier/2016-11-25-Wine-Club-06_Alex_Pre-2015-Wines_11.jpg', 'Durbanville Hills', '2014', 'Merlot, Rosé', 'Red', '<p>A delightful combination of raspberries, red cherries, strawberries and berry compote aromas.</p><p>Refreshing, light-bodied and crisp with summer berries on the palate.</p><p>Enjoy on its own or served with baked ham with a berry glaze, chunky fish soups and stews, antipasti, mildly dressed salads and Peking duck.</p>'],
+            // ['Alvi\'s Drift CVC', 'Photos/2016-11-25 Wine Club 06_Alex_Wines from 2014 or earlier/2016-11-25-Wine-Club-06_Alex_Pre-2015-Wines_03.jpg', 'Alvi\'s Drift Wine Estate', '2014', 'Chenin Blanc, Viognier, Charonnay', 'White', '<p>The AD CVC has a lovely pale lemon/straw color. The nose showed lifted peach and apricot characters. A lovely blend of roasted nuts with a hint of butterscotch and ripe melons. The palate is balanced to perfection with oak, fruit, and acidity all adding to the wines length and fullness. Great with Asian dishes, seafood and soft cheeses.</p>'],
+            // ['Alto Rouge', 'Photos/2016-11-25 Wine Club 06_Alex_Wines from 2014 or earlier/2016-11-25-Wine-Club-06_Alex_Pre-2015-Wines_09.jpg', 'Alto Wine Estate', '2013', 'Shiraz, Cabernet Franc, Merlot, Cabernet Sauvignon', 'Red'],
+            // ['Perdeberg Chenin Blanc', 'Photos/2016-11-25 Wine Club 06_Alex_Wines from 2014 or earlier/2016-11-25-Wine-Club-06_Alex_Pre-2015-Wines_01.jpg', 'Pedeberg Winery', '2014', 'Chenin Blanc', 'Red'],
+            // ['Anura Arpeggio', 'Photos/2016-11-25 Wine Club 06_Alex_Wines from 2014 or earlier/2016-11-25-Wine-Club-06_Alex_Pre-2015-Wines_07.jpg', 'Anura Vineyards', '2013', 'Shiraz, Mourvedre Viognier', 'Red'],
+            // ['Top Secret', 'Photos/2016-11-25 Wine Club 06_Alex_Wines from 2014 or earlier/2016-11-25-Wine-Club-06_Alex_Pre-2015-Wines_05.jpg', 'Western Cape', '2011', 'Merlot', 'Red'],
+
+            // ['Natural Sweet Rosé', 'Photos/2016-12-31 Wine Club 07_Jaydon\'s Aunt_New Years Summer Theme/2016-12-31-Wine-Club-07_Jaydon\'s-Aunt_Summer-Theme_11.jpg', 'Robertson Winery', 'NV', 'Rosé', 'Red'],
+            // ['Polkadraai', 'Photos/2016-12-31 Wine Club 07_Jaydon\'s Aunt_New Years Summer Theme/2016-12-31-Wine-Club-07_Jaydon\'s-Aunt_Summer-Theme_05.jpg', 'Stellenbosch Hills', '2016', 'Chenin Blanc, Sauvignon Blanc', 'White'],
+            // ['Kleine Zalze Chenin Blanc', 'Photos/2016-12-31 Wine Club 07_Jaydon\'s Aunt_New Years Summer Theme/2016-12-31-Wine-Club-07_Jaydon\'s-Aunt_Summer-Theme_07.jpg', 'Kleine Zalze', '2016', 'Chenin Blanc', 'White'],
+            // ['Waterside', 'Photos/2016-12-31 Wine Club 07_Jaydon\'s Aunt_New Years Summer Theme/2016-12-31-Wine-Club-07_Jaydon\'s-Aunt_Summer-Theme_09.jpg', 'NA', '2016', 'Chardonnay', 'White'],
+            // ['Chapel White', 'Photos/2016-12-31 Wine Club 07_Jaydon\'s Aunt_New Years Summer Theme/2016-12-31-Wine-Club-07_Jaydon\'s-Aunt_Summer-Theme_03.jpg', 'Robertson Winery', '2016', 'Chenin Blanc', 'White'],
+			
+            ['Casillero del Diablo','Photos/2017-11-17 Wine-Club 16 Jaydon_International/2017-11-17 Wine-Club 16 Jaydon_International_15.jpg', 'Cancha y Toro', '2015', 'Carmeriere', 'International Wines', '', '89.86'],
+            ['Bin 40','Photos/2017-11-17 Wine-Club 16 Jaydon_International/2017-11-17 Wine-Club 16 Jaydon_International_19.jpg', 'Lindeman\'s', '2014', 'Merlot', 'International Wines', '', '89.57'],
+            ['Collezione','Photos/2017-11-17 Wine-Club 16 Jaydon_International/2017-11-17 Wine-Club 16 Jaydon_International_17.jpg', 'Sensi', '2015', 'Montepulciano d\'abruzzo', 'International Wines', '', '84.00'],
+            ['Nottage Hill','Photos/2017-11-17 Wine-Club 16 Jaydon_International/2017-11-17 Wine-Club 16 Jaydon_International_13.jpg', 'Hardy\'s Wine Estate', '2015', 'Chardonnay', 'International Wines', '', '84.00'],
+            ['Branco','Photos/2017-11-17 Wine-Club 16 Jaydon_International/2017-11-17 Wine-Club 16 Jaydon_International_08.jpg', 'Alcube', '2015', 'Vinho Branco', 'International Wines', '', '89.00'],
+            ['Reserve Special','Photos/2017-11-17 Wine-Club 16 Jaydon_International/2017-11-17 Wine-Club 16 Jaydon_International_10.jpg', 'Gerard Bertrand', '2015', 'Sauvignon Blanc', 'International Wines', '', '87.29'],
+            ['Delle Venezie','Photos/2017-11-17 Wine-Club 16 Jaydon_International/2017-11-17 Wine-Club 16 Jaydon_International_06.jpg', 'Zenato', '2016', 'Pinot Grigio', 'International Wines', '', '91.57'],
+            
+            ['Bin 963','Photos/2017-10-14 Wine-Club 15 Alex_Odd Bins/2017-10-14 Wine-Club 15 Alex_Odd Bins_12.jpg', 'Odd Bins (Checkers)', '2015', 'Cabernet Sauvignon, Cabernet Franc, Merlot, Malbec', 'Odd Bins', '', '85.71'],
+            ['Bin 947','Photos/2017-10-14 Wine-Club 15 Alex_Odd Bins/2017-10-14 Wine-Club 15 Alex_Odd Bins_11.jpg', 'Odd Bins (Checkers)', '2016', 'Pinotage Shiraz, Pinot Noir, Grenache', 'Odd Bins', '', '85.71'],
+            ['Bin 929','Photos/2017-10-14 Wine-Club 15 Alex_Odd Bins/2017-10-14 Wine-Club 15 Alex_Odd Bins_10.jpg', 'Odd Bins (Checkers)', '2015', 'Cabernet Sauvignon, Merlot', 'Odd Bins', '', '83.86'],
+            ['Bin 80','Photos/2017-10-14 Wine-Club 15 Alex_Odd Bins/2017-10-14 Wine-Club 15 Alex_Odd Bins_09.jpg', 'Odd Bins (Checkers)', '2017', 'Rosé', 'Odd Bins', '', '80.71'],
+            ['Bin 305','Photos/2017-10-14 Wine-Club 15 Alex_Odd Bins/2017-10-14 Wine-Club 15 Alex_Odd Bins_08.jpg', 'Odd Bins (Checkers)', '2017', 'Unwooded Chardonnay', 'Odd Bins', '', '84.00'],
+            
+            ['Porcupine Ridge','Photos/2017-09-16 Wine-Club 14 Matt_Pizza Night/2017-09-16 Wine-Club 14 Matt_Pizza Night_11.jpg', 'Boekenhoutskloof', '2016', 'Syrah', 'Pizza Evening', '', '87.75'],
+            ['Larone','Photos/2017-09-16 Wine-Club 14 Matt_Pizza Night/2017-09-16 Wine-Club 14 Matt_Pizza Night_09.jpg', 'Boschendal', '2015', 'Shiraz Mourvédre', 'Pizza Evening', '', '86.50'],
+            ['Finca Las Moras Malbec','Photos/2017-09-16 Wine-Club 14 Matt_Pizza Night/2017-09-16 Wine-Club 14 Matt_Pizza Night_13.jpg', 'Finca Las Moras', '2017', 'Malbec', 'Pizza Evening', '', '88.00'],
+            ['Terra Del Capo','Photos/2017-09-16 Wine-Club 14 Matt_Pizza Night/2017-09-16 Wine-Club 14 Matt_Pizza Night_07.jpg', 'Anthonij Rupert Wines', '2017', 'Pinot Grigio', 'Pizza Evening', '', '87.50'],
+            
+            ['Landskroon Cabernet Sauvignon','Photos/2017-08-12 Wine-Club 13_Bronwen_Mystery Wines/2017-08-12 Wine-Club 13_Bronwen_Mystery Wines_14.jpg', 'Landskroon', '2015', 'Cabernet Sauvignon', 'Mystery Wine Night', '', '86.00'],
+            ['Baker Station Shiraz','Photos/2017-08-12 Wine-Club 13_Bronwen_Mystery Wines/2017-08-12 Wine-Club 13_Bronwen_Mystery Wines_12.jpg', 'Franschhoek Cellar', '2015', 'Shiraz', 'Mystery Wine Night', '', '85.00'],
+            ['Theuniskraal Mascato Rosé','Photos/2017-08-12 Wine-Club 13_Bronwen_Mystery Wines/2017-08-12 Wine-Club 13_Bronwen_Mystery Wines_10.jpg', 'Theuniskraal ', '2016', 'Mascato Rosé', 'Mystery Wine Night', '', '85.60'],
+            ['Buitenverwachting Blanc de Noir','Photos/2017-08-12 Wine-Club 13_Bronwen_Mystery Wines/2017-08-12 Wine-Club 13_Bronwen_Mystery Wines_08.jpg', 'Buitenverwachting', '2016', 'Blanc de Noir', 'Mystery Wine Night', '', '85.60'],
+            ['Diemersdal Estate Unwooded Chardonnay','Photos/2017-08-12 Wine-Club 13_Bronwen_Mystery Wines/2017-08-12 Wine-Club 13_Bronwen_Mystery Wines_06.jpg', 'Diemersdal Estate', '2017', 'Unwooded Chardonnay', 'Mystery Wine Night', '', '91.60'],
+            ['Spice Route Viognier','Photos/2017-08-12 Wine-Club 13_Bronwen_Mystery Wines/2017-08-12 Wine-Club 13_Bronwen_Mystery Wines_04.jpg', 'Spice Route', '2015', 'Viognier', 'Mystery Wine Night', '', '89.30'],
+
+            ['The Old Museum','Photos/2017-07-15 Wine-Club 12_Matt_Red Wine Night/2017-06-23 Wine Club 11_Jaydon_Red Wine Night_08.jpg', 'Franchoek Cellar', '2015', 'Merlot', 'Red Wines', '', '89.00'],
+            ['Guardian Peak Merlot','Photos/2017-07-15 Wine-Club 12_Matt_Red Wine Night/2017-06-23 Wine Club 11_Jaydon_Red Wine Night_06.jpg', 'Guardian Peak Wines', '2013', 'Merlot', 'Red Wines', '', '88.75'],
+            ['Leopards Leap Merlot','Photos/2017-07-15 Wine-Club 12_Matt_Red Wine Night/2017-06-23 Wine Club 11_Jaydon_Red Wine Night_04.jpg', 'Leopard\'s Leap Wines', '2015', 'Merlot', 'Red Wines', '', '86.00'],
+            ['The First Lady','Photos/2017-07-15 Wine-Club 12_Matt_Red Wine Night/2017-06-23 Wine Club 11_Jaydon_Red Wine Night_02.jpg', 'Warwick Wine Estate', '2015', 'Cabernet Sauvignon', 'Red Wines', '', '89.00'],
+
+            ['Pongrácz Desiderius','Photos/2017-06-23 Wine-Club 11_Jaydon_Celebrations/2017-06-23-Wine-Club-11_Jaydon_Celebrations_02.jpg', 'Pongrácz', '2016', 'Chardonnay, Pinot Noir', 'Celebrations', '', '79.80'],
+            ['Naughty Girl','Photos/2017-06-23 Wine-Club 11_Jaydon_Celebrations/2017-06-23-Wine-Club-11_Jaydon_Celebrations_10.jpg', 'Alvi\'s Drift', '2016', 'Sparkling Rosé', 'Celebrations', '', '80.20'],
+            ['Blush','Photos/2017-06-23 Wine-Club 11_Jaydon_Celebrations/2017-06-23-Wine-Club-11_Jaydon_Celebrations_22.jpg', 'Bon Courage', '2016', 'Vin Doux', 'Celebrations', '', '88.20'],
+            ['Graham Beck Brut Chardonnay - Pinot Noir','Photos/2017-06-23 Wine-Club 11_Jaydon_Celebrations/2017-06-23-Wine-Club-11_Jaydon_Celebrations_03.jpg', 'Graham Beck', '2016', 'Chardonnay, Pinot Noir', 'Celebrations', '', '88.20'],
+            ['Villiera Monro Prestige Cuvée Cap Classique Brut','Photos/2017-06-23 Wine-Club 11_Jaydon_Celebrations/2017-06-23-Wine-Club-11_Jaydon_Celebrations_07.jpg', 'Villiera', '2016', 'MCC Brut', 'Celebrations', '', '85.80'],
+            ['Sparkling Peach','Photos/2017-06-23 Wine-Club 11_Jaydon_Celebrations/2017-06-23-Wine-Club-11_Jaydon_Celebrations_09.jpg', 'South Africa', '2016', 'Sparkling Cooler', 'Celebrations', '', '83.20'],
+            ['J.C. le Roux La Vallée Methode Cap Classique Demi-Sec','Photos/2017-06-23 Wine-Club 11_Jaydon_Celebrations/2017-06-23-Wine-Club-11_Jaydon_Celebrations_05.jpg', 'J.C. le Roux', '2016', 'Demi-Sec', 'Celebrations', '', '92.40'],
+            ['Cape Pearl Pinotage','Photos/2017-05-13-Wine-Club-10_Alex_Cheap-Wine/2017-05-13-Wine-Club-10_Alex_Cheap-Wine_01.jpg', 'Cape Pearl', '2016', 'Pinotage', 'Cheap Wine Night', '', '36.25'],
+            ['Tin Cups Sweet Rosé','Photos/2017-05-13-Wine-Club-10_Alex_Cheap-Wine/2017-05-13-Wine-Club-10_Alex_Cheap-Wine_04.jpg', 'Tin cups', '2016', 'Sweet Rosé', 'Cheap Wine Night', '', '42.50'],
+            ['Grimont Moscato Perlé','Photos/2017-05-13-Wine-Club-10_Alex_Cheap-Wine/2017-05-13-Wine-Club-10_Alex_Cheap-Wine_03.jpg', 'Grimont', '2016', 'Moscato Perlé', 'Cheap Wine Night', '', '42.75'],
+            ['Stonedale Chenin Blanc','Photos/2017-05-13-Wine-Club-10_Alex_Cheap-Wine/2017-05-13-Wine-Club-10_Alex_Cheap-Wine_06.jpg', 'Stonedale', '2016', 'Chenin Blanc', 'Cheap Wine Night', '', '43.12'],
+            ['Welmoed','Photos/2017-03-25-Wine-Club-09_Matt_White Wine (GIF Night)/2017-03-25-Wine-Club-09_Matt_White Wine (GIF Night)_14.jpg', 'Welmoed', '2016', 'Chenin Blanc', 'GIF Night', '', '86.75'],
+            ['Running Duck','Photos/2017-03-25-Wine-Club-09_Matt_White Wine (GIF Night)/2017-03-25-Wine-Club-09_Matt_White Wine (GIF Night)_12.jpg', 'Stellar Organic Winery', '2016', 'Sauvignon Blanc', 'GIF Night', '', '88.75'],
+            ['Theuniskraal Cape Riesling','Photos/2017-03-25-Wine-Club-09_Matt_White Wine (GIF Night)/2017-03-25-Wine-Club-09_Matt_White Wine (GIF Night)_07.jpg', 'Theuniskraal', '2016', 'Cape Riesling', 'GIF Night', '', '89.25'],
+            ['Grande Cuvée','Photos/2017-03-25-Wine-Club-09_Matt_White Wine (GIF Night)/2017-03-25-Wine-Club-09_Matt_White Wine (GIF Night)_09.jpg', 'Boschendal', '2016', 'Sauvignon Blanc', 'GIF Night', '', '94.25'],
+            ['Mr Perfect','Photos/2017-02-18-Wine-Club-08_Bronwen_Valentines-Rose/2017-02-18-Wine-Club-08_Bronwen_Valentines-Rose_10.jpg', 'Rijks Cellar', '2016', 'Rosé', 'Valentines Rosé', '', '81.50'],
+            ['Durbanville Hills Merlot Rosé','Photos/2017-02-18-Wine-Club-08_Bronwen_Valentines-Rose/2017-02-18-Wine-Club-08_Bronwen_Valentines-Rose_08.jpg', 'Durbanville Hills', '2015', 'Merlot Rosé', 'Valentines Rosé', '', '82.67'],
+            ['Unbelievable','Photos/2017-02-18-Wine-Club-08_Bronwen_Valentines-Rose/2017-02-18-Wine-Club-08_Bronwen_Valentines-Rose_07.jpg', 'Mt Vernon Winery', '2016', 'Rosé', 'Valentines Rosé', '', '82.67'],
+            ['Delheim','Photos/2017-02-18-Wine-Club-08_Bronwen_Valentines-Rose/2017-02-18-Wine-Club-08_Bronwen_Valentines-Rose_06.jpg', 'Stellenbosch', '2016', 'Pinotage Rosé', 'Valentines Rosé', '', '84.83'],
+            ['Mulderbosch Cabernet Sauvignon Rosé','Photos/2017-02-18-Wine-Club-08_Bronwen_Valentines-Rose/2017-02-18-Wine-Club-08_Bronwen_Valentines-Rose_09.jpg', 'Mulderbosch Vineyards', '2015', 'Cabernet Sauvignon Rosé', 'Valentines Rosé', '', '89.50'],
+            ['Neberburg Rosé','Photos/2017-02-18-Wine-Club-08_Bronwen_Valentines-Rose/2017-02-18-Wine-Club-08_Bronwen_Valentines-Rose_05.jpg', 'Nederburg', '2016', 'Rosé', 'Valentines Rosé', '', '91.00'],
+            ['Chapel White','Photos/2016-12-31 Wine Club 07_Jaydon\'s Aunt_New Years Summer Theme/2016-12-31-Wine-Club-07_Jaydon\'s-Aunt_Summer-Theme_03.jpg', 'Robertson Winery', '2016', 'Chenin Blanc', 'Summer Theme', '', '63.00'],
+            ['Waterside','Photos/2016-12-31 Wine Club 07_Jaydon\'s Aunt_New Years Summer Theme/2016-12-31-Wine-Club-07_Jaydon\'s-Aunt_Summer-Theme_09.jpg', 'Waterside', '2016', 'Chardonnay', 'Summer Theme', '', '66.00'],
+            ['Kleine Zalze Chenin Blanc','Photos/2016-12-31 Wine Club 07_Jaydon\'s Aunt_New Years Summer Theme/2016-12-31-Wine-Club-07_Jaydon\'s-Aunt_Summer-Theme_07.jpg', 'Kleine Zalze', '2016', 'Chenin Blanc', 'Summer Theme', '', '66.00'],
+            ['Polkadraai','Photos/2016-12-31 Wine Club 07_Jaydon\'s Aunt_New Years Summer Theme/2016-12-31-Wine-Club-07_Jaydon\'s-Aunt_Summer-Theme_05.jpg', 'Stellenbosch Hills', '2016', 'Chenin Blanc, Sauvignon Blanc', 'Summer Theme', '', '46.00'],
+            ['Natural Sweet Rosé','Photos/2016-12-31 Wine Club 07_Jaydon\'s Aunt_New Years Summer Theme/2016-12-31-Wine-Club-07_Jaydon\'s-Aunt_Summer-Theme_11.jpg', 'Robertson Winery', '2016', 'Rosé', 'Summer Theme', '', '74.00'],
+            ['Top Secret','Photos/2016-11-25 Wine Club 06_Alex_Wines from 2014 or earlier/2016-11-25-Wine-Club-06_Alex_Pre-2015-Wines_05.jpg', 'Western Cape', '2011', 'Merlot', 'Wines from 2014 or Earlier', '', '44.00'],
+            ['Anura Arpeggio','Photos/2016-11-25 Wine Club 06_Alex_Wines from 2014 or earlier/2016-11-25-Wine-Club-06_Alex_Pre-2015-Wines_07.jpg', 'Anura Vineyards', '2013', 'Shiraz, Mourvedre Viognier', 'Wines from 2014 or Earlier', '', '67.50'],
+            ['Perdeberg Chenin Blanc','Photos/2016-11-25 Wine Club 06_Alex_Wines from 2014 or earlier/2016-11-25-Wine-Club-06_Alex_Pre-2015-Wines_01.jpg', 'Pedeberg Winery', '2014', 'Chenin Blanc', 'Wines from 2014 or Earlier', '', '66.67'],
+            ['Alto Rouge','Photos/2016-11-25 Wine Club 06_Alex_Wines from 2014 or earlier/2016-11-25-Wine-Club-06_Alex_Pre-2015-Wines_09.jpg', 'Alto Wine Estate', '2013', 'Shiraz, Cabernet Franc, Merlot, Cabernet Sauvignon', 'Wines from 2014 or Earlier', '', '74.17'],
+            ['Alvi\'s Drift CVC','Photos/2016-11-25 Wine Club 06_Alex_Wines from 2014 or earlier/2016-11-25-Wine-Club-06_Alex_Pre-2015-Wines_03.jpg', 'Alvi\'s Drift Wine Estate', '2014', 'Chenin Blanc, Viognier, Chardonnay', 'Wines from 2014 or Earlier', '<p>The AD CVC has a lovely pale lemon/straw color. The nose showed lifted peach and apricot characters. A lovely blend of roasted nuts with a hint of butterscotch and ripe melons. The palate is balanced to perfection with oak, fruit, and acidity all adding to the wines length and fullness. Great with Asian dishes, seafood and soft cheeses.</p>', '75.83'],
+            ['Durbanville Hills Merlot Rosé','Photos/2016-11-25 Wine Club 06_Alex_Wines from 2014 or earlier/2016-11-25-Wine-Club-06_Alex_Pre-2015-Wines_11.jpg', 'Durbanville Hills', '2014', 'Merlot', 'Wines from 2014 or Earlier', '<p>A delightful combination of raspberries, red cherries, strawberries and berry compote aromas.</p><p>Refreshing, light-bodied and crisp with summer berries on the palate.</p><p>Enjoy on its own or served with baked ham with a berry glaze, chunky fish soups and stews, antipasti, mildly dressed salads and Peking duck.</p>', '55.00'],
+            ['Waverly Hills','Photos/2016-10-22 Wine Club 05_Jaydon_Halloween Theme/2016-10-22-Wine-Club-05_Jaydon_Halloween_13.jpg', 'Rietvallei Wine Estate', '2011', 'Shiraz, Mourvédre, Viognier', 'Halloween Theme', '<p>The deep maroon centre is complimented with strong prune, oak and spicy tones. A bouquet of red pepper and caramel leaps out of the glass. The wine has a remarkably soft velvet front palette and fruity mid palette, with a fresh and long nish. The Shiraz provides this blend with typical red fruit and spicy avours, with Mourvedre providing berry and fresh herbal aromas. The Viognier compliments the overall aromatic sensation and softness to accompany the wood.</p>', '72.50'],
+            ['Black Tie','Photos/2016-10-22 Wine Club 05_Jaydon_Halloween Theme/2016-10-22-Wine-Club-05_Jaydon_Halloween_11.jpg', 'Black Box Wines', '2015', 'Merlot, Cabernet Sauvignon', 'Halloween Theme', '', '39.30'],
+            ['Wolftrap','Photos/2016-10-22 Wine Club 05_Jaydon_Halloween Theme/2016-10-22-Wine-Club-05_Jaydon_Halloween_09.jpg', 'Boekenhoutskloof', '2015', 'Viognier, Chenin Blanc, Grenache', 'Halloween Theme', '<p>Rich opulent flavours of dark fruit, violets, black pepper and liquorice. Round and smooth palate with a lingering soft finish. Hints of oak, soft tannins and voluptuous flavours makes for early, easy drinking. </p>', '50.00'],
+            ['Live-a-Little','Photos/2016-10-22 Wine Club 05_Jaydon_Halloween Theme/2016-10-22-Wine-Club-05_Jaydon_Halloween_07.jpg', 'Stellar Organic Winery', '2015', 'Organic', 'Halloween Theme', '', '38.00'],
+            ['Stonedale','Photos/2016-09-24 Wine Club 04_Matt_Rotation/2016-09-24-Wine-Club-04_Matt_Rotation_12.jpg', 'Rietvallei Wine Estate', '2015', 'Shiraz', 'Rotation 4', '<p>A wine with attractive mocha and berry fruit on the nose, revealing that same berry fruit and mocha on the pallet, infused with chocolate and a hint of spiciness. A smooth and well-balanced wine with soft, juicy tannins, ending with a lingering aftertaste</p>', '44.00'],
+            ['Oakridge','Photos/2016-09-24 Wine Club 04_Matt_Rotation/2016-09-24-Wine-Club-04_Matt_Rotation_10.jpg', 'Stellenbosch', '2015', 'Ruby Cabernet Cinsault', 'Rotation 4', '', '80.00'],
+            ['Balance','Photos/2016-09-24 Wine Club 04_Matt_Rotation/2016-09-24-Wine-Club-04_Matt_Rotation_08.jpg', 'Overhex Wines', '2016', 'Sauvignon Blanc', 'Rotation 4', '', '66.00'],
+            ['Ladybird','Photos/2016-09-24 Wine Club 04_Matt_Rotation/2016-09-24-Wine-Club-04_Matt_Rotation_05.jpg', 'Laibach Vineyards', '2014', 'Chenin Blanc', 'Rotation 4', '', '64.00'],
+            ['Amy Sauvignon Blanc','Photos/2016-09-24 Wine Club 04_Matt_Rotation/2016-09-24-Wine-Club-04_Matt_Rotation_03.jpg', 'Vinglo', '2015', 'Sauvignon Blanc', 'Rotation 4', '', '62.00'],
+            ['ORC Rosé','Photos/2016-08-26 Wine Club 03_Jaydon_Rotation/2016-08-26-Wine-Club-03_Jaydon_Rotation_09.jpg', 'Orange River Cellars', '2015', 'Rosé', 'Rotation 3', '<p>Pink – red with a mouthful of Turkish Delight, strawberry and summer flavours .Enjoy with curries and other spicy foods. Serve well-chilled.</p>', '68.33'],
+            ['Diemersfontein Pinotage','Photos/2016-08-26 Wine Club 03_Jaydon_Rotation/2016-08-26-Wine-Club-03_Jaydon_Rotation_10.jpg', 'Diemersfontein', '2014', 'Pinotage            ', 'Rotation 3', '<p>On the nose distinct coffee, rich dark chocolate and baked plums. The ripe subtle tannins create a wine to be drunk very young. This unique style of Pinotage is a perfect accompaniment to salmon, roast venison and even chocolate mousse. Dark chocolate with a hint of mint and baked plums on the nose.</p>', '66.67'],
+            ['Pear Tree White','Photos/2016-08-26 Wine Club 03_Jaydon_Rotation/2016-08-26-Wine-Club-03_Jaydon_Rotation_08.jpg', 'Bellingham Wines', '2015', 'Chenin Blanc, Viognier', 'Rotation 3', '<p>Bursts of tropical pineapple, passion fruit and honey melon, tinged with yellow peach and zesty orange blossom both on the nose and palate. An engaging wine of great balance and integration that finishes with freshness and lively fruity intrigue</p>', '70.00'],
+            ['Durbanville Hills Chardonnay','Photos/2016-08-26 Wine Club 03_Jaydon_Rotation/2016-08-26-Wine-Club-03_Jaydon_Rotation_06.jpg', 'Durbanville Hills', '2015', 'Chardonnay', 'Rotation 3', '<p>The grapes for this wine were sourced from vineyards located mostly in the lower Durbanville foothills on the southern slopes, some 250 metres above sea level and grown in dark red soils. The vineyards, yielding around 9 tons per hectare, were harvested from mid to late February between 24° and 26° Balling, when the grapes were showing ripe, yellow colours.</p>', '0'],
+            ['Klawer Chenin Blanc','Photos/2016-08-26 Wine Club 03_Jaydon_Rotation/2016-08-26-Wine-Club-03_Jaydon_Rotation_07.jpg', 'Klawer Cellars', '2016', 'Chenin Blanc', 'Rotation 3', '', '0'],
+            ['Graham Beck','Photos/2016-07-23 Wine Club 02_Bronwen_Rotation/2016-07-23-Wine-Club-02_Bronwen_Rotation_05.jpg', 'Graham Beck Wines', '2013', 'Shiraz, Cabernet Sauvignon, Viognier', 'Rotation 2', 'Sweet red berry fruit flavours from the Merlot and Cabernet Franc and spiciness from the Shiraz with layers of subtle fruit tannins on the palate. Harmonious, lightly oaked, fruit-rich and flavourful with lively drinkability. A generous and rewarding red wine.<p/><p>64% Shiraz, 35% Cabernet Sauvignon, 1% Viognier. Enjoy with veal, roast lamb, stews or rich pasta dishes.', '56.00'],
+            ['Two Oceans','Photos/2016-07-23 Wine Club 02_Bronwen_Rotation/2016-07-23-Wine-Club-02_Bronwen_Rotation_06.jpg', 'Western Cape', '2015', 'Shiraz Rosé', 'Rotation 2', '', '75.00'],
+            ['Nederburg Lyric','Photos/2016-07-23 Wine Club 02_Bronwen_Rotation/2016-07-23-Wine-Club-02_Bronwen_Rotation_08.jpg', 'Nederburg', '2015', 'Sauvignon Blanc, Chenin Blanc, Chardonnay', 'Rotation 2', 'This harmonious wine is made from Sauvignon blanc, Chenin blanc and Chardonnay. Crisp and refreshing with aromas of passion fruit and citrus, and hints of freshly-cut grass. Enjoy with seafood, salads, mild Indian curries and Thai noodles.', '69.00'],
+            ['Alexanderfontein Cabernet Sauvignon','Photos/2016-07-23 Wine Club 02_Bronwen_Rotation/2016-07-23-Wine-Club-02_Bronwen_Rotation_04.jpg', 'Ormande', '2015', 'Cabernet Sauvignon', 'Rotation 2', 'Few things complement each other as well as this Cabernet Sauvingnon, a good dark chocolate and a small cup of coffee. A good quality organic dark chocolate, but not too bitter in flavour, is a good choice or opt for your favourite dark chocolate as the accompaniment to a glass of the wine. A chocolate truffle made with dark chocolate and a hint of coffee will also be delicious.', '42.00'],
+            ['The Strawberry','Photos/2016-06-18 Wine Club 01_Alex_Rotation/2016-06-18-Wine-Club-01_Alex_Rotation_07.jpg', 'Mooi Plaas', '2015', 'Pinot Noir', 'Rotation 1', 'The wine has a lovely dark strawberry, with a nose of ripe strawberries. The palate is fresh and nicely balanced. The alcohol of 12 vol% and firm acid is ideal for an easy drinking summer wine.', '58.00'],
+            ['Niel Joubert','Photos/2016-06-18 Wine Club 01_Alex_Rotation/2016-06-18-Wine-Club-01_Alex_Rotation_05.jpg', 'Paarl', '2015', 'Chenin Blanc', 'Rotation 1', 'Almost colourless with bright yellow reflections. Very attractive nose with lots of tropical fruit gauva, granadilla and some citrus. Bright and fresh in the mouth with lively action across the palate. All the flavour the nose promised with hint of pineapple and some lemon. Good, brisk acidity gives balance to the ripe tropical flavours. Refreshing finish.', '68.00'],
+            ['Coral Reef','Photos/2016-06-18 Wine Club 01_Alex_Rotation/2016-06-18-Wine-Club-01_Alex_Rotation_10.jpg', 'Western Cape', '2015', 'Merlot', 'Rotation 1', 'Coral Reef, a Merlot harvested and created in the Western Cape, 2015. Overall we gave this wine 4.5 stars, and a well deserved place in our top 10 list.', '85.00'],
+            
+        ];
+
+        var regions = [];
+        var styles = [];
+        var colours = [];
+
+        for (i = 0; i < arr.length; i++) {
+            var newTemplate = template;
+            var winery = arr[i][2];
+            var style = arr[i][4];
+            var colour = arr[i][5];
+            var rating = "";
+            if(arr[i].length > 7)
+                rating = arr[i][7] + "%";
+            newTemplate = newTemplate.replace('[NAME]', arr[i][0]);
+            newTemplate = newTemplate.replace('[URL]', arr[i][1]);
+            newTemplate = newTemplate.replace('[WINERY]', winery);
+            newTemplate = newTemplate.replace('[VINTAGE]', arr[i][3]);
+            newTemplate = newTemplate.replace('[STYLE]', style);
+            newTemplate = newTemplate.replace('[COLOUR]', colour);
+            newTemplate = newTemplate.replace('[RATING]', rating);
+            if (arr[i].length > 6) {
+                newTemplate = newTemplate.replace('[DESCRIPTION]', arr[i][6]);
+
+            }
+            else
+                newTemplate = newTemplate.replace('[DESCRIPTION]',"");
+            $("#divList ul").append(newTemplate);
+
+
+            // create the dropdown options based on your array:
+            if ($.inArray(winery, regions) < 0) {
+                regions.push(winery);
+                $('#filter-winery').append($('<option/>', {
+                    value: winery,
+                    text: winery
+                }));
+            }
+
+            if ($.inArray(style, styles) < 0) {
+                styles.push(style);
+                $('#filter-style').append($('<option/>', {
+                    value: style,
+                    text: style
+                }));
+            }
+
+            if ($.inArray(colour, colours) < 0) {
+                colours.push(colour);
+                $('#filter-colour').append($('<option/>', {
+                    value: colour,
+                    text: colour
+                }));
+            }
+        }
+
+        // how many on one page?
+        var userList = new List('users', {
+            valueNames: ['name', 'winery', 'vintage', 'style', 'colour', 'score'],
+            page: 10,
+            plugins: [ListPagination({})]
+        });
+
+
+        var selectFilterValues = {
+            colour: '',
+            style: ''
+        };
+
+        $('.select-filter').change(function () {
+            var selection = this.value,
+              name = $(this).attr('name');
+
+            selectFilterValues[name] = selection;
+
+            userList.filter(function (item) {
+                var values = item.values(),
+                  matches = 0,
+                  length = 0;
+
+                $.each(selectFilterValues, function (key, val) {
+                    length++;
+
+                    if (values[key].trim() == val || val === '') {
+                        matches++;
+                    }
+                });
+
+                return (matches === length);
+            });
+        });
+
+    </script>
+</body>
+</html>

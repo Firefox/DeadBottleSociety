@@ -1,0 +1,621 @@
+﻿<!DOCTYPE html>
+<html lang="en">
+
+<head>
+    <link rel="icon" type="image/x-icon" href="favicon.ico">
+    <meta charset="utf-8">
+    <meta http-equiv="X-UA-Compatible" content="IE=edge">
+    <meta name="viewport" content="width=device-width, initial-scale=1">
+    <meta name="description" content="">
+    <meta name="author" content="">
+    <title>Dead Bottle Society</title>
+    <!-- Bootstrap Core CSS -->
+    <link href="vendor/bootstrap/css/bootstrap.min.css" rel="stylesheet">
+    <!-- Theme CSS -->
+    <link href="css/clean-blog.min.css" rel="stylesheet">
+    <!-- Custom Fonts -->
+    <link href="vendor/font-awesome/css/font-awesome.min.css" rel="stylesheet" type="text/css">
+    <link href='https://fonts.googleapis.com/css?family=Lora:400,700,400italic,700italic' rel='stylesheet' type='text/css'>
+    <link href='https://fonts.googleapis.com/css?family=Open+Sans:300italic,400italic,600italic,700italic,800italic,400,300,600,700,800'
+        rel='stylesheet' type='text/css'>
+    <link href='css/jquery.bsPhotoGallery.css' rel='stylesheet' type='text/css'>
+    <!-- HTML5 Shim and Respond.js IE8 support of HTML5 elements and media queries -->
+    <!-- WARNING: Respond.js doesn't work if you view the page via file:// -->
+    <!--[if lt IE 9]>
+        <script src="https://oss.maxcdn.com/libs/html5shiv/3.7.0/html5shiv.js"></script>
+        <script src="https://oss.maxcdn.com/libs/respond.js/1.4.2/respond.min.js"></script>
+    <![endif]-->
+    <!-- Add jQuery library -->
+    <script type="text/javascript" src="js/jquery-1.10.1.min.js"></script>
+    <script type="text/javascript" src="js/masonry.pkgd.min.js"></script>
+    <script src="https://npmcdn.com/imagesloaded@4.1/imagesloaded.pkgd.min.js"></script>
+
+    <!-- Add mousewheel plugin (this is optional) -->
+    <script type="text/javascript" src="js/jquery.mousewheel-3.0.6.pack.js"></script>
+    <!-- Add fancyBox main JS and CSS files -->
+    <script type="text/javascript" src="js/jquery.fancybox.js?v=2.1.5"></script>
+    <link rel="stylesheet" type="text/css" href="css/jquery.fancybox.css?v=2.1.5" media="screen" />
+    <!-- Add Button helper (this is optional) -->
+    <link rel="stylesheet" type="text/css" href="css/jquery.fancybox-buttons.css?v=1.0.5" />
+    <script type="text/javascript" src="js/jquery.fancybox-buttons.js?v=1.0.5"></script>
+    <!-- Add Thumbnail helper (this is optional) -->
+    <link rel="stylesheet" type="text/css" href="css/jquery.fancybox-thumbs.css?v=1.0.7" />
+    <script type="text/javascript" src="js/jquery.fancybox-thumbs.js?v=1.0.7"></script>
+    <!-- Add Media helper (this is optional) -->
+    <script type="text/javascript" src="js/jquery.fancybox-media.js?v=1.0.6"></script>
+    <script type="text/javascript" src="js/main.js"></script>
+    <link href='css/main.css' rel='stylesheet' type='text/css'>
+
+    <script type="text/javascript">
+        $(document).ready(function () {
+			/*
+			 *  Simple image gallery. Uses default settings
+			 */
+
+            $('.fancybox').fancybox();
+
+			/*
+			 *  Different effects
+			 */
+
+            // Change title type, overlay closing speed
+            $(".fancybox-effects-a").fancybox({
+                helpers: {
+                    title: {
+                        type: 'outside'
+                    },
+                    overlay: {
+                        speedOut: 0
+                    }
+                }
+            });
+
+            // Disable opening and closing animations, change title type
+            $(".fancybox-effects-b").fancybox({
+                openEffect: 'none',
+                closeEffect: 'none',
+
+                helpers: {
+                    title: {
+                        type: 'over'
+                    }
+                }
+            });
+
+            // Set custom style, close if clicked, change title type and overlay color
+            $(".fancybox-effects-c").fancybox({
+                wrapCSS: 'fancybox-custom',
+                closeClick: true,
+
+                openEffect: 'none',
+
+                helpers: {
+                    title: {
+                        type: 'inside'
+                    },
+                    overlay: {
+                        css: {
+                            'background': 'rgba(238,238,238,0.85)'
+                        }
+                    }
+                }
+            });
+
+            // Remove padding, set opening and closing animations, close if clicked and disable overlay
+            $(".fancybox-effects-d").fancybox({
+                padding: 0,
+
+                openEffect: 'elastic',
+                openSpeed: 150,
+
+                closeEffect: 'elastic',
+                closeSpeed: 150,
+
+                closeClick: true,
+
+                helpers: {
+                    overlay: null
+                }
+            });
+
+			/*
+			 *  Button helper. Disable animations, hide close button, change title type and content
+			 */
+
+            $('.fancybox-buttons').fancybox({
+                openEffect: 'none',
+                closeEffect: 'none',
+
+                prevEffect: 'none',
+                nextEffect: 'none',
+
+                closeBtn: false,
+
+                helpers: {
+                    title: {
+                        type: 'inside'
+                    },
+                    buttons: {}
+                },
+
+                afterLoad: function () {
+                    this.title = 'Image ' + (this.index + 1) + ' of ' + this.group.length + (this.title ? ' - ' + this.title : '');
+                }
+            });
+
+
+			/*
+			 *  Thumbnail helper. Disable animations, hide close button, arrows and slide to next gallery item if clicked
+			 */
+
+            $('.fancybox-thumbs').fancybox({
+                prevEffect: 'none',
+                nextEffect: 'none',
+
+                closeBtn: false,
+                arrows: false,
+                nextClick: true,
+
+                helpers: {
+                    thumbs: {
+                        width: 50,
+                        height: 50
+                    }
+                }
+            });
+
+			/*
+			 *  Media helper. Group items, disable animations, hide arrows, enable media and button helpers.
+			*/
+            $('.fancybox-media')
+                .attr('rel', 'media-gallery')
+                .fancybox({
+                    openEffect: 'none',
+                    closeEffect: 'none',
+                    prevEffect: 'none',
+                    nextEffect: 'none',
+
+                    arrows: false,
+                    helpers: {
+                        media: {},
+                        buttons: {}
+                    }
+                });
+
+			/*
+			 *  Open manually
+			 */
+
+            $("#fancybox-manual-a").click(function () {
+                $.fancybox.open('1_b.jpg');
+            });
+
+            $("#fancybox-manual-b").click(function () {
+                $.fancybox.open({
+                    href: 'iframe.html',
+                    type: 'iframe',
+                    padding: 5
+                });
+            });
+
+            $("#fancybox-manual-c").click(function () {
+                $.fancybox.open([
+                    {
+                        href: '1_b.jpg',
+                        title: 'My title'
+                    }, {
+                        href: '2_b.jpg',
+                        title: '2nd title'
+                    }, {
+                        href: '3_b.jpg'
+                    }
+                ], {
+                        helpers: {
+                            thumbs: {
+                                width: 75,
+                                height: 50
+                            }
+                        }
+                    });
+            });
+
+
+        });
+    </script>
+</head>
+
+<body>
+    <!-- Navigation -->
+    <nav class="navbar navbar-default navbar-custom navbar-fixed-top">
+        <div class="container-fluid">
+            <!-- Brand and toggle get grouped for better mobile display -->
+            <div class="navbar-header page-scroll">
+                <button type="button" class="navbar-toggle" data-toggle="collapse" data-target="#bs-example-navbar-collapse-1">
+                    <span class="sr-only">Toggle navigation</span>
+                    Menu
+                    <i class="fa fa-bars"></i>
+                </button>
+                <a class="navbar-brand" href="index.html">Dead Bottle Society</a>
+            </div>
+            <!-- Collect the nav links, forms, and other content for toggling -->
+            <div class="collapse navbar-collapse" id="bs-example-navbar-collapse-1">
+                <ul class="nav navbar-nav navbar-right">
+                    <li>
+                        <a href="index.html">Home</a>
+                    </li>
+                    <li>
+                        <a href="about.html">About Us</a>
+                    </li>
+                    <li>
+                        <a href="Top10Wines.html">Our Top 10 Wines</a>
+                    </li>
+                    <li>
+                        <a href="SearchWines.html">Search Wines</a>
+                    </li>
+                    <li>
+                        <a href="gallery.html">Gallery</a>
+                    </li>
+                    <li>
+                        <a href="themes.html">Themes</a>
+                    </li>
+                    <!--<li>
+                        <a href="contact.html">Contact</a>
+                    </li>-->
+                </ul>
+            </div>
+            <!-- /.navbar-collapse -->
+        </div>
+        <!-- /.container -->
+    </nav>
+    <!-- Page Header -->
+    <!-- Set your background image for this header on the line below. -->
+    <header class="intro-header" style="background-image: url('Photos/2017-11-17 Wine-Club 16 Jaydon_International/2017-11-17 Wine-Club 16 Jaydon_International_05.jpg')">
+        <div class="container">
+            <div class="row">
+                <div class="col-lg-12 col-md-10">
+                    <div class="site-heading">
+                        <div class="divBackgroundHeader">
+                            <h1>Dead Bottle Society</h1>
+                            <hr class="small">
+                            <span class="subheading">
+                                Cape Town Wine Club
+                                <br/>
+                                <i>"In wine, there's truth."― Pliny the Elder</i>
+                            </span>
+                        </div>
+                    </div>
+                </div>
+            </div>
+        </div>
+    </header>
+
+    <!-- Main Content -->
+    <div class="container">
+        <div class="row">
+            <div class="col-lg-8 col-lg-offset-2 col-md-10 col-md-offset-1">
+                One hot summers evening a band of 4 friends sat around a table, drinking, eating, and playing the infamous UNO card game,
+                the disney version. Yes, we're adults, and No, cards arent ours, I swear!
+                </p>
+                <p>
+                    Stuck in the busy 9 to 5 work day life style we seldomly saw each other anymore. We wished we could hang out more often and
+                    catch up on each others life. But we always said that and never comitted to seeing each other sooner.
+                </p>
+                <p>
+                    Over a bottle of wine, we came up with the idea of seeing each other once a month to pretend to be sophisticated adults,
+                    drink wine and have a good time. Alex, the crazy one, in his almighty strength and excitement, slammed
+                    a wine glass on the table that night and so brought about the name for our club, Dead Bottle Society.
+                    The wine glass broke at its stem leaving it in two, but it left us as a group whole and happy that we
+                    could look forward to seeing each other every month.
+                </p>
+
+                <hr>
+
+            </div>
+        </div>
+
+        <div class="row">
+            <div class="col-lg-8 col-lg-offset-2 col-md-10 col-md-offset-1">
+                <h1>Wine Rating</h1>
+                <div class="col-lg-6 col-md-6 ">
+                    <a class="fancybox-thumbs" href="img\ScoreSheet.JPG" data-fancybox-group="gallery" title="Score Sheet">
+                        <img alt="" src="img\ScoreSheet.JPG" class="img-responsive">
+                    </a>
+                </div>
+                <p class="mar20T">
+                    At our wine club we ensure fair and accurate rating for all our wines. We have a score sheet that helps us score each wine
+                    by scoring points in 5 categories.
+                    <br/>Over time this has evolved from the beginning, where we rated only out of 25, to now, where we have adapted
+                    and modified Robert Parker's rating system that makes use of a 50 - 100 point quality scale.
+                    <br/>
+                    <br/> To read more about Robert Parker's rating system, click
+                    <a href="https://www.robertparker.com/ratings">
+                        here.
+                    </a>
+                </p><br/>
+                <div class="col-lg-12 col-md-12 pad0">
+                    <p>
+                        View our top wines and see if you have had any of these yet.
+                        <br/>
+                        <a href="Top10Wines.html" class="col-lg-6 col-md-6 col-xs-6 pad0">
+                            Our top 10 Wines
+                        </a>
+                    </p>
+                    <br/>
+                    <p style="margin-top:20px">
+                        Or search through all the wines we have had the pleasure tasting during our nights at wine club.
+                        <br/>
+                        <a href="SearchWines.html" class="col-lg-6 col-md-6 col-xs-6 pad0">
+                            Seach Wines
+                        </a>
+                    </p>
+
+                </div>
+            </div>
+        </div>
+
+        <div class="row">
+            <div class="col-lg-8 col-lg-offset-2 col-md-10 col-md-offset-1">
+
+                <div id="divPosts">
+                    <hr>
+                    <div class="post-preview">
+                        <a href="Blogs/2017-11-17.html">
+                            <h2 class="post-title">International Wines</h2>
+                        </a>
+                        <p class="post-meta">Hosted by Jaydon Webb on November 17, 2017</p>
+                        <div class="col-lg-12 PhotoWrap">
+                            <img src="Photos/2017-11-17 Wine-Club 16 Jaydon_International/2017-11-17 Wine-Club 16 Jaydon_International_05.jpg" style="width: 100%;">
+                        </div>
+                    </div>
+                    <br>
+                    <p>
+                        <a href="Blogs/2017-11-17.html" class="col-lg-12 col-md-12 col-xs-12 pad0">Click here to view more details about this evening.</a>
+                        <div class="clear"></div>
+                    </p>
+
+                    <hr>
+                    <div class="post-preview">
+                        <a href="Blogs/2017-10-14.html">
+                            <h2 class="post-title">Odd Bins</h2>
+                        </a>
+                        <p class="post-meta">Hosted by Alex Nossek on October 14, 2017</p>
+                        <div class="col-lg-12 PhotoWrap">
+                            <img src="Photos/2017-10-14 Wine-Club 15 Alex_Odd Bins/2017-10-14 Wine-Club 15 Alex_Odd Bins_05.jpg" style="width: 100%;">
+                        </div>
+                    </div>
+                    <br>
+                    <p>
+                        <a href="Blogs/2017-10-14.html" class="col-lg-12 col-md-12 col-xs-12 pad0">Click here to view more details about this evening.</a>
+                        <div class="clear"></div>
+                    </p>
+                    <hr>
+                    <div class="post-preview">
+                        <a href="Blogs/2017-09-16.html">
+                            <h2 class="post-title">Pizza Evening</h2>
+                        </a>
+                        <p class="post-meta">Hosted by Matthew Renaud on September 16, 2017</p>
+                        <div class="col-lg-12 PhotoWrap">
+                            <img src="Photos/2017-09-16 Wine-Club 14 Matt_Pizza Night/2017-09-16 Wine-Club 14 Matt_Pizza Night_16.jpg" style="width: 100%;">
+                        </div>
+                    </div>
+                    <br>
+                    <p>
+                        <a href="Blogs/2017-09-16.html" class="col-lg-12 col-md-12 col-xs-12 pad0">Click here to view more details about this evening.</a>
+                        <div class="clear"></div>
+                    </p>
+                    <!-- <div class="post-preview">
+                        <a href="Blogs/2017-08-12.html">
+                            <h2 class="post-title">Mystery Wine Night</h2>
+                        </a>
+                        <p class="post-meta">Hosted by Bronwen Smith on 12 August, 2017</p>
+                        <div class="col-lg-12 PhotoWrap">
+                            <img src="Photos/2017-08-12 Wine-Club 13_Bronwen_Mystery Wines/2017-08-12 Wine-Club 13_Bronwen_Mystery Wines_16.jpg"
+                                style="width: 100%;">
+                        </div>
+                    </div>
+                    <br>
+                    <a href="Blogs/2017-08-12.html" class="col-lg-12 col-md-12 col-xs-12 pad0">Click here to view more details about this evening.</a>
+                    <div class="clear"></div> -->
+                </div>
+
+                <div class="clear"></div>
+                <hr>
+
+                <!-- Pager -->
+                <ul class="pager">
+                    <li class="next">
+                        <a href="themes.html">All Evenings &rarr;</a>
+                    </li>
+                </ul>
+            </div>
+        </div>
+
+        <div class="row">
+            <div class="col-lg-8 col-lg-offset-2 col-md-10 col-md-offset-1">
+
+                <div class="modal fade" id="myModal" tabindex="-1" role="dialog" aria-labelledby="myModalLabel" aria-hidden="true">
+                    <div class="modal-dialog">
+                        <div class="modal-content">
+                            <button data-dismiss="modal" class="close">&times;</button>
+                            <div class="modalBody">
+                            </div>
+                            <div class="modalFooter">
+                                <div class="post-meta"></div>
+                            </div>
+                        </div>
+                        <!-- /.modal-content -->
+                    </div>
+                    <!-- /.modal-dialog -->
+                </div>
+                <!-- /.modal -->
+
+                <!-- <div class="col-lg-12"> -->
+                <!-- <h1 class="page-header">Gallery</h1> -->
+                <!-- </div> -->
+                <!-- <div id="myTest" class="clear"></div> -->
+
+
+                <!-- Pager -->
+                <!-- style="padding-right: 15px;" -->
+                <!-- <ul class="pager"> -->
+                <!-- <li class="next"> -->
+                <!-- <a href="gallery.html">View All &rarr;</a> -->
+                <!-- </li> -->
+                <!-- </ul> -->
+            </div>
+        </div>
+
+    </div>
+
+
+    <hr>
+    <!-- Footer -->
+    <footer>
+        <div class="container">
+            <div class="row">
+                <div class="col-lg-8 col-lg-offset-2 col-md-10 col-md-offset-1">
+                    <ul class="list-inline text-center">
+                        <li>
+                            <a href="#">
+                                <span class="fa-stack fa-lg">
+                                    <i class="fa fa-circle fa-stack-2x"></i>
+                                    <i class="fa fa-instagram fa-stack-1x fa-inverse"></i>
+                                </span>
+                            </a>
+                        </li>
+                        <!-- <li>
+                            <a href="#">
+                                <span class="fa-stack fa-lg">
+                                    <i class="fa fa-circle fa-stack-2x"></i>
+                                    <i class="fa fa-facebook fa-stack-1x fa-inverse"></i>
+                                </span>
+                            </a>
+                        </li>
+                        <li>
+                            <a href="#">
+                                <span class="fa-stack fa-lg">
+                                    <i class="fa fa-circle fa-stack-2x"></i>
+                                    <i class="fa fa-github fa-stack-1x fa-inverse"></i>
+                                </span>
+                            </a>
+                        </li> -->
+                    </ul>
+                    <p class="copyright text-muted">Copyright &copy; DBS
+                        <label id="lblYear"></label>
+                    </p>
+                </div>
+            </div>
+        </div>
+    </footer>
+    <!-- jQuery -->
+    <!-- Bootstrap Core JavaScript -->
+    <script src="vendor/bootstrap/js/bootstrap.min.js"></script>
+    <!-- Contact Form JavaScript -->
+    <script src="js/jqBootstrapValidation.js"></script>
+    <script src="js/contact_me.js"></script>
+    <!-- Theme JavaScript -->
+    <script src="js/clean-blog.min.js"></script>
+    <script src="js/jquery.bsPhotoGallery.js"></script>
+
+    <script type="text/javascript">
+        $(document).ready(function () {
+
+            $('li img').on('click', function () {
+                var src = $(this).attr('src');
+                var img = '<img src="' + src + '" class="img-responsive"/>';
+                var name = $(this).attr('name') || '';
+                $('#myModal').modal();
+                $('#myModal').on('shown.bs.modal', function () {
+                    $('#myModal .modalBody').html(img);
+                    $('#myModal .modalFooter').html(name);
+                });
+                $('#myModal').on('hidden.bs.modal', function () {
+                    $('#myModal .modalBody').html('');
+                    $('#myModal .modalFooter').html('');
+                });
+            });
+
+            var $container = $('#myTest');
+
+            $container.imagesLoaded()
+                .always(function (instance) {
+                    //console.log('all images loaded');
+                })
+                .done(function (instance) {
+                    //console.log('all images successfully loaded');
+                    $container.masonry({
+                        itemSelector: '.post-box',
+                        columnWidth: '.post-box',
+                        transitionDuration: 0
+                    });
+                })
+                .fail(function () {
+                    console.log('all images loaded, at least one is broken');
+                })
+                .progress(function (instance, image) {
+                    var result = image.isLoaded ? 'loaded' : 'broken';
+                    console.log('image is ' + result + ' for ' + image.img.src);
+                });
+        })
+    </script>
+
+
+    <style type="text/css">
+        .img-thumbnail {
+            padding: 10px;
+        }
+
+        .post-box {
+            margin: 5px 0 0px 0;
+            padding-right: 0px;
+            padding-left: 4px;
+        }
+
+        .fancybox-custom .fancybox-skin {
+            box-shadow: 0 0 50px #222;
+        }
+
+        .height220 {
+            min-height: 150px;
+            padding-right: 0px;
+        }
+
+        ul {
+            padding: 0 0 0 0;
+            margin: 0 0 0 0;
+        }
+
+        ul li {
+            list-style: none;
+        }
+
+        ul li img {
+            cursor: pointer;
+        }
+
+        /* The Close Button */
+
+        .close {
+            margin-right: 5px;
+            font-size: 21px;
+        }
+
+        .modalBody {
+            position: relative;
+            margin: 10px;
+        }
+
+        .modalFooter {
+            margin-left: 10px;
+            margin-bottom: 10px;
+            margin-right: 10px;
+            font-size: 16px;
+        }
+
+        .clear {
+            clear: both;
+        }
+    </style>
+</body>
+
+</html>
