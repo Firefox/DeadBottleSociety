@@ -374,6 +374,27 @@ var imgPlayoffs = [
 	['International Play-offs','Photos/2018-02-24 Wine-Club 18 Bronwen_International Playoffs/2018-02-24 Wine-Club 18 Bronwen_International Playoffs_38.jpg'],
 ];
 
+var imgUniqueTastes = [
+	['Unique Tastes','Photos/2018-03-17 Wine-Club 19 Jaydon_Unique Tastes/2018-03-17 Wine-Club 19 Jaydon_Unique Tastes_01.jpg'],
+	['Unique Tastes','Photos/2018-03-17 Wine-Club 19 Jaydon_Unique Tastes/2018-03-17 Wine-Club 19 Jaydon_Unique Tastes_02.jpg'],
+	['Unique Tastes','Photos/2018-03-17 Wine-Club 19 Jaydon_Unique Tastes/2018-03-17 Wine-Club 19 Jaydon_Unique Tastes_03.jpg'],
+	['Unique Tastes','Photos/2018-03-17 Wine-Club 19 Jaydon_Unique Tastes/2018-03-17 Wine-Club 19 Jaydon_Unique Tastes_04.jpg'],
+	['Unique Tastes','Photos/2018-03-17 Wine-Club 19 Jaydon_Unique Tastes/2018-03-17 Wine-Club 19 Jaydon_Unique Tastes_05.jpg'],
+	['Unique Tastes','Photos/2018-03-17 Wine-Club 19 Jaydon_Unique Tastes/2018-03-17 Wine-Club 19 Jaydon_Unique Tastes_06.jpg'],
+	['Unique Tastes','Photos/2018-03-17 Wine-Club 19 Jaydon_Unique Tastes/2018-03-17 Wine-Club 19 Jaydon_Unique Tastes_07.jpg'],
+	['Unique Tastes','Photos/2018-03-17 Wine-Club 19 Jaydon_Unique Tastes/2018-03-17 Wine-Club 19 Jaydon_Unique Tastes_08.jpg'],
+	['Unique Tastes','Photos/2018-03-17 Wine-Club 19 Jaydon_Unique Tastes/2018-03-17 Wine-Club 19 Jaydon_Unique Tastes_09.jpg'],
+	['Unique Tastes','Photos/2018-03-17 Wine-Club 19 Jaydon_Unique Tastes/2018-03-17 Wine-Club 19 Jaydon_Unique Tastes_10.jpg'],
+	['Unique Tastes','Photos/2018-03-17 Wine-Club 19 Jaydon_Unique Tastes/2018-03-17 Wine-Club 19 Jaydon_Unique Tastes_11.jpg'],
+	['Unique Tastes','Photos/2018-03-17 Wine-Club 19 Jaydon_Unique Tastes/2018-03-17 Wine-Club 19 Jaydon_Unique Tastes_12.jpg'],
+	['Unique Tastes','Photos/2018-03-17 Wine-Club 19 Jaydon_Unique Tastes/2018-03-17 Wine-Club 19 Jaydon_Unique Tastes_13.jpg'],
+	['Unique Tastes','Photos/2018-03-17 Wine-Club 19 Jaydon_Unique Tastes/2018-03-17 Wine-Club 19 Jaydon_Unique Tastes_14.jpg'],
+	['Unique Tastes','Photos/2018-03-17 Wine-Club 19 Jaydon_Unique Tastes/2018-03-17 Wine-Club 19 Jaydon_Unique Tastes_15.jpg'],
+	['Unique Tastes','Photos/2018-03-17 Wine-Club 19 Jaydon_Unique Tastes/2018-03-17 Wine-Club 19 Jaydon_Unique Tastes_16.jpg'],
+	['Unique Tastes','Photos/2018-03-17 Wine-Club 19 Jaydon_Unique Tastes/2018-03-17 Wine-Club 19 Jaydon_Unique Tastes_17.jpg'],
+	['Unique Tastes','Photos/2018-03-17 Wine-Club 19 Jaydon_Unique Tastes/2018-03-17 Wine-Club 19 Jaydon_Unique Tastes_18.jpg']
+];
+
 
 
 // Top 10 arrays
@@ -387,9 +408,7 @@ var top10WinesList = [
 	['Casillero del Diablo','Photos/2017-11-17 Wine-Club 16 Jaydon_International/2017-11-17 Wine-Club 16 Jaydon_International_15.jpg', 'Cancha y Toro', '2015', 'Carmeriere', 'International Wines', '','7','8.99', '', 'checked', '', '', '', 'Alex Nossek'],
 	['Bin 40','Photos/2017-11-17 Wine-Club 16 Jaydon_International/2017-11-17 Wine-Club 16 Jaydon_International_19.jpg', 'Lindeman\'s', '2014', 'Merlot', 'International Wines', '','7','8.96', '', 'checked', '', '', '', 'Kurt Jonathan'],
 	['Mulderbosch Cabernet Sauvignon Rosé','Photos/2017-02-18-Wine-Club-08_Bronwen_Valentines-Rose/2017-02-18-Wine-Club-08_Bronwen_Valentines-Rose_09.jpg', 'Mulderbosch Vineyards', '2015', 'Cabernet Sauvignon Rosé', 'Valentines Rosé', '','6','8.95', '', 'checked', '', '', '', 'Bronwen Smith'],
-	['Spice Route Viognier','Photos/2017-08-12 Wine-Club 13_Bronwen_Mystery Wines/2017-08-12 Wine-Club 13_Bronwen_Mystery Wines_04.jpg', 'Spice Route', '2015', 'Viognier', 'Mystery Wine Night', '','5','8.93', '', 'checked', '', '', '', 'Bronwen Smith'],
-
-
+	['Five Climates','Photos/2018-03-17 Wine-Club 19 Jaydon_Unique Tastes/2018-03-17 Wine-Club 19 Jaydon_Unique Tastes_05.jpg', 'Boland Cellar', '2017', 'Sauvignon Blanc', 'Unique Tastes', '','6','8.93', '', 'checked', '', '', '', 'Matthew Renaud'],
 ];
 
 
@@ -499,6 +518,9 @@ function FindImagesByThemeID(themeId){
         break;
     case 18:
         return imgPlayoffs;
+        break;
+    case 19:
+        return imgUniqueTastes;
         break;
     default:
         return null;
