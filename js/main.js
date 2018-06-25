@@ -395,6 +395,31 @@ var imgUniqueTastes = [
 	['Unique Tastes','Photos/2018-03-17 Wine-Club 19 Jaydon_Unique Tastes/2018-03-17 Wine-Club 19 Jaydon_Unique Tastes_18.jpg']
 ];
 
+var imgSimondiumRegion = [
+	['Simondium Region','Photos/2018-04-27 Wine-Club 20 Andrew_Simondium Region/2018-04-27 Wine-Club 20 Andrew_Simondium Region_01.jpg'],
+	['Simondium Region','Photos/2018-04-27 Wine-Club 20 Andrew_Simondium Region/2018-04-27 Wine-Club 20 Andrew_Simondium Region_02.jpg'],
+	['Simondium Region','Photos/2018-04-27 Wine-Club 20 Andrew_Simondium Region/2018-04-27 Wine-Club 20 Andrew_Simondium Region_03.jpg'],
+	['Simondium Region','Photos/2018-04-27 Wine-Club 20 Andrew_Simondium Region/2018-04-27 Wine-Club 20 Andrew_Simondium Region_04.jpg'],
+	['Simondium Region','Photos/2018-04-27 Wine-Club 20 Andrew_Simondium Region/2018-04-27 Wine-Club 20 Andrew_Simondium Region_05.jpg'],
+	['Simondium Region','Photos/2018-04-27 Wine-Club 20 Andrew_Simondium Region/2018-04-27 Wine-Club 20 Andrew_Simondium Region_06.jpg'],
+	['Simondium Region','Photos/2018-04-27 Wine-Club 20 Andrew_Simondium Region/2018-04-27 Wine-Club 20 Andrew_Simondium Region_07.jpg'],
+	['Simondium Region','Photos/2018-04-27 Wine-Club 20 Andrew_Simondium Region/2018-04-27 Wine-Club 20 Andrew_Simondium Region_08.jpg'],
+	['Simondium Region','Photos/2018-04-27 Wine-Club 20 Andrew_Simondium Region/2018-04-27 Wine-Club 20 Andrew_Simondium Region_09.jpg'],
+	['Simondium Region','Photos/2018-04-27 Wine-Club 20 Andrew_Simondium Region/2018-04-27 Wine-Club 20 Andrew_Simondium Region_10.jpg'],
+	['Simondium Region','Photos/2018-04-27 Wine-Club 20 Andrew_Simondium Region/2018-04-27 Wine-Club 20 Andrew_Simondium Region_11.jpg'],
+	['Simondium Region','Photos/2018-04-27 Wine-Club 20 Andrew_Simondium Region/2018-04-27 Wine-Club 20 Andrew_Simondium Region_12.jpg'],
+	['Simondium Region','Photos/2018-04-27 Wine-Club 20 Andrew_Simondium Region/2018-04-27 Wine-Club 20 Andrew_Simondium Region_13.jpg'],
+	['Simondium Region','Photos/2018-04-27 Wine-Club 20 Andrew_Simondium Region/2018-04-27 Wine-Club 20 Andrew_Simondium Region_14.jpg'],
+	['Simondium Region','Photos/2018-04-27 Wine-Club 20 Andrew_Simondium Region/2018-04-27 Wine-Club 20 Andrew_Simondium Region_15.jpg'],
+	['Simondium Region','Photos/2018-04-27 Wine-Club 20 Andrew_Simondium Region/2018-04-27 Wine-Club 20 Andrew_Simondium Region_16.jpg'],
+	['Simondium Region','Photos/2018-04-27 Wine-Club 20 Andrew_Simondium Region/2018-04-27 Wine-Club 20 Andrew_Simondium Region_17.jpg'],
+	['Simondium Region','Photos/2018-04-27 Wine-Club 20 Andrew_Simondium Region/2018-04-27 Wine-Club 20 Andrew_Simondium Region_18.jpg'],
+	['Simondium Region','Photos/2018-04-27 Wine-Club 20 Andrew_Simondium Region/2018-04-27 Wine-Club 20 Andrew_Simondium Region_19.jpg'],
+	['Simondium Region','Photos/2018-04-27 Wine-Club 20 Andrew_Simondium Region/2018-04-27 Wine-Club 20 Andrew_Simondium Region_20.jpg'],
+	['Simondium Region','Photos/2018-04-27 Wine-Club 20 Andrew_Simondium Region/2018-04-27 Wine-Club 20 Andrew_Simondium Region_21.jpg'],
+	['Simondium Region','Photos/2018-04-27 Wine-Club 20 Andrew_Simondium Region/2018-04-27 Wine-Club 20 Andrew_Simondium Region_22.jpg'],
+	['Simondium Region','Photos/2018-04-27 Wine-Club 20 Andrew_Simondium Region/2018-04-27 Wine-Club 20 Andrew_Simondium Region_23.jpg']
+];
 
 
 // Top 10 arrays
@@ -408,7 +433,7 @@ var top10WinesList = [
 	['Casillero del Diablo','Photos/2017-11-17 Wine-Club 16 Jaydon_International/2017-11-17 Wine-Club 16 Jaydon_International_15.jpg', 'Cancha y Toro', '2015', 'Carmeriere', 'International Wines', '','7','8.99', '', 'checked', '', '', '', 'Alex Nossek'],
 	['Bin 40','Photos/2017-11-17 Wine-Club 16 Jaydon_International/2017-11-17 Wine-Club 16 Jaydon_International_19.jpg', 'Lindeman\'s', '2014', 'Merlot', 'International Wines', '','7','8.96', '', 'checked', '', '', '', 'Kurt Jonathan'],
 	['Mulderbosch Cabernet Sauvignon Rosé','Photos/2017-02-18-Wine-Club-08_Bronwen_Valentines-Rose/2017-02-18-Wine-Club-08_Bronwen_Valentines-Rose_09.jpg', 'Mulderbosch Vineyards', '2015', 'Cabernet Sauvignon Rosé', 'Valentines Rosé', '','6','8.95', '', 'checked', '', '', '', 'Bronwen Smith'],
-	['Five Climates','Photos/2018-03-17 Wine-Club 19 Jaydon_Unique Tastes/2018-03-17 Wine-Club 19 Jaydon_Unique Tastes_05.jpg', 'Boland Cellar', '2017', 'Sauvignon Blanc', 'Unique Tastes', '','6','8.93', '', 'checked', '', '', '', 'Matthew Renaud'],
+	['Vrede en Lust Lady J Syrah','Photos/2018-04-27 Wine-Club 20 Andrew_Simondium Region/2018-04-27 Wine-Club 20 Andrew_Simondium Region_08.jpg', 'Vrede en Lust', '2013', 'Syrah', 'Simondium Region', '','5','8.94', '', 'checked', '', '', '', 'Alex Nossek']
 ];
 
 
@@ -522,6 +547,9 @@ function FindImagesByThemeID(themeId){
     case 19:
         return imgUniqueTastes;
         break;
+	case 20:
+		return imgSimondiumRegion;
+		break;
     default:
         return null;
 	}	
